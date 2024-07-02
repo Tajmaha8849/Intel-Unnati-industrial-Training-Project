@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+
+    <title>  Real State - Price Predictor</title>
+</head>
+
+<body>
+    <div class="container m-1">
+        <h1>  Real State - Price Predictor</h1>
+        <h3 class="mb-4">Please Enter your Attributes Values</h3>
+        <form method="POST">
+            {# This hidden_tag is a CSRF security feature. #}
+            {{ form.hidden_tag() }}
+            <br>
+            
+            {{ form.CRIM.label }} {{form.CRIM}}
+            <br>
+            {{ form.ZN.label }} {{form.ZN}}
+            <br>
+            {{ form.INDUS.label }} {{form.INDUS}}
+            <br>
+            {{ form.CHAS.label }} {{form.CHAS}}
+            <br>
+            {{ form.NOX.label }} {{form.NOX}}
+            <br>
+            {{ form.RM.label }} {{form.RM}}
+            <br>
+            {{ form.AGE.label }} {{form.AGE}}
+            <br>
+            {{ form.DIS.label }} {{form.DIS}}
+            <br>
+            
+            {{ form.RAD.label }} {{form.RAD}}
+            <br>
+            {{ form.TAX.label }} {{form.TAX}}
+            <br>
+            {{ form.PTRATIO.label }} {{form.PTRATIO}}
+            <br>
+            
+            {{ form.B.label }} {{form.B}}
+            <br>
+            
+            {{ form.LSTATE.label }} {{form.LSTATE}}
+            <br><br><br>
+            {{ form.submit() }}
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+
+	<title>RealEstateIntelli - Price Predictor</title>
+
+</head>
+
+<body>
+	<div class="container ">
+		<h1 style="display: inline-block; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 600; margin-left:10px ; margin-top: 20px;  color: currentColor;  align-items: center; flex-direction: row; color: black;">Thank You. Here is the information you gave:</h1><br>
+		<br>
+		<br>
+
+		<div class="Box
+		">
+		
+		<ul>
+			<li style="display: block; color:black; font-size: large  ; font-weight: 500; animation-direction: alternate-reverse;">CRIM (Per capita crime rate by town): {{session['CRIM']}}</li>
+			<br>
+			
+			
+			<li style="display: block; color:burlywood; font-size: large  ; font-weight: 500; animation-direction: alternate-reverse;">ZN(Proportion of residential land zoned for lots over 25,000 sq.): {{session['ZN']}}</li>
+			<br>
+			<li style="display: block; color:red; font-size: large  ; font-weight: 500; animation-direction: alternate-reverse;">INDUS (Proportion of non-retail business acres per town
+				): {{session['INDUS']}}</li><br>
+			<li style="display: block; color:violet; font-size: large  ; font-weight: 500; animation-direction: alternate-reverse;">CHAS (Charles River dummy variable (1 if tract bounds river; 0 otherwise)
+				): {{session['CHAS']}}</li><br>
+
+            <li style="display: block; color:orange; font-size: large  ; font-weight: 500; animation-direction: alternate-reverse;">NOX: Nitric oxides concentration (parts per 10 million): {{session['NOX']}}</li>
+			<br>
+			<li style="display: block; color:black; font-size: large  ; font-weight: 560; animation-direction: alternate-reverse;">RM (Average number of rooms per dwelling): {{session['RM']}}</li>
+			<br>
+			<li style="display: block; color:blue; font-size: large  ; font-weight: 520; animation-direction: alternate-reverse;">AGE(Proportion of owner-occupied units built prior to 1940): {{session['AGE']}}</li>
+			<br>
+			<li style="display: block; color:red; font-size: large  ; font-weight: 540; animation-direction: alternate-reverse;"><b>DIS (Weighted distances to five Boston employment centers)</b>: {{session['DIS']}}</li>
+            <br>
+			<li style="display: block; color:orangered; font-size: large  ; font-weight: 500; animation-direction: alternate-reverse;">RAD (Index of accessibility to radial highways): {{session['RAD']}}</li>
+			<br>
+            <li style="display: block; color:red; font-size: large  ; font-weight: 590; animation-direction: alternate-reverse;"> TAX (Full-value property-tax rate per $10,000): {{session['TAX']}}</li>
+			<br>
+			<li style="display: block; color:green; font-size: large  ; font-weight: 610; animation-direction: alternate-reverse;"> PTRATIO (Pupil-teacher ratio by town): {{session['PTRATIO']}}</li>
+			<br>
+			<li style="display: block; color:violet; font-size: large  ; font-weight: 650; animation-direction: alternate-reverse;">B (1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town): {{session['B']}}</li>
+			<br>
+			
+			<li style="display: block; color:red; font-size: large  ; font-weight: 700; animation-direction: alternate-reverse;">LSTATE (Percentage of lower status of the population): {{session['LSTATE']}}</li>
+			<br>
+		</ul>
+	</div>
+		<h3 style="border: 2px solid black;padding: 10px; text-align:center;  color: grey; ">Your predicted Price: $ {{results}} </h3>
+	</div>
+</body>
+
+</html>
